@@ -1,0 +1,33 @@
+version: '3.3'
+services:
+  lighttpd:
+    image: sebp/lighttpd
+    volumes:
+      - ./perl:/var/www/localhost/htdocs
+    ports:
+      - "8000:80"
+    tty: true
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'SHIPPING'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'password'
+      MYSQL_ROOT_PASSWORD: 'password'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d
+  perl:
+    volumes:
+      - ./perl:/opt
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    container_name: perl
+    depends_on:
+      - "db"
