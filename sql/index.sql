@@ -1,5 +1,4 @@
 CREATE SCHEMA SHIPPING;
-use SHIPPING;
 CREATE TABLE SHIPPING.Persoon (
     personid int(11) NOT NULL PRIMARY KEY,
     first_name varchar(20) NOT NULL,
