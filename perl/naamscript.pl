@@ -4,7 +4,7 @@ use DBI;
 
 #variabelen
 $db="SHIPPING";
-$host="127.0.0.1:3306";
+$host="192.168.56.100:3306";
 $user="root";
 $password="password";
 $pinguin= "https://user-images.githubusercontent.com/57662351/103408875-a0b59680-4b64-11eb-844a-331c6d711742.png";
