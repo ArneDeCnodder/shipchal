@@ -7,7 +7,7 @@ $db="SHIPPING";
 $host="192.168.56.10:3306";
 $user="root";
 $password="password";
-$pinguin= "pinguin.png";
+$pinguin= "https://user-images.githubusercontent.com/57662351/103408875-a0b59680-4b64-11eb-844a-331c6d711742.png";
 
 # connect to MySQL...
 my $dbh   = DBI->connect ("DBI:mysql:database=$db:host=$host",
