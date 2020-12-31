@@ -1,6 +1,7 @@
+DROP SCHEMA SHIPPING;
 CREATE SCHEMA SHIPPING;
 CREATE TABLE SHIPPING.Persoon (
-    personid int(11) NOT NULL PRIMARY KEY,
+    personid int NOT NULL PRIMARY KEY,
     first_name varchar(20) NOT NULL,
     last_name varchar(20) NOT NULL);
 INSERT INTO SHIPPING.Persoon (personid, first_name, last_name) 
